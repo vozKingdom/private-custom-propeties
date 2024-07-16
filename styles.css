@@ -1,0 +1,159 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* //////////// */
+
+
+
+/* Global Variables */
+
+:root{
+/* colors */      
+    --zoro-base-color: rgb(0, 255, 127, 0.7);
+    --sanji-base-color: rgba(255, 255, 0, 0.575);
+    --nami-base-color:	rgb(255, 153, 0, 0.7);
+
+    --zoro-strong-color: rgb(0, 153, 77);
+    --sanji-strong-color: rgb(201, 201, 0);
+    --nami-strong-color:rgb(230, 138, 0);
+
+    --zoro-dark-color: rgb(0, 141, 71);
+    --sanji-dark-color: rgb(206, 206, 0);
+    --nami-dark-color:rgb(224, 135, 0);
+}
+
+/* //////////// */
+
+
+
+header {
+    /* border: red 1px solid; */
+    text-align: center;
+}
+
+header>* {
+    padding: 15px;
+}
+
+
+
+
+
+.crew-container {
+    margin: 0 auto;
+    width: 77vw;
+
+    display: flex;
+    justify-content: space-between;
+    gap: calc(15px + 0.5vw);
+
+
+    padding: calc(15px + 3vw);
+}
+
+.move{
+    --_shadow-color: black;
+    --_title-color: black;
+    --_btn-color: ;
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.3), -1rem -1rem 1.5px var(--_shadow-color);
+    
+    
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    gap: 7px;
+    
+    width: calc(17vw + 1vw);
+    padding: calc(15px + 0.5vw);
+    border-radius: 15px;
+    font-size: calc(1rem + 0.2vw);
+
+
+/* Notes ~Image overflow */
+    /* overflow: scroll; */
+}
+
+
+
+.move--zoro{
+    --_shadow-color: var(--zoro-base-color);
+    --_title-color: var(--zoro-strong-color);
+    --_btn-color: var(--zoro-dark-color);
+
+}
+
+.move--sanji{
+    --_shadow-color: var(--sanji-base-color);
+    --_title-color: var(--sanji-strong-color);
+    --_btn-color: var(--sanji-dark-color);
+    
+}
+
+.move--nami{
+    --_shadow-color: var(--nami-base-color);
+    --_title-color: var(--nami-strong-color);
+    --_btn-color: var(--nami-dark-color);
+    
+}
+
+
+
+
+
+.move_img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+/* Notes ~Image overflow */
+    /* width: 30vw; */
+}
+
+
+.move_title{
+    color: var(--_title-color, black);
+}
+
+
+.move_gift{
+    font-style: italic;
+
+/* Notes ~text-content overflow */
+    /* overflow: auto; */
+    /* white-space: nowrap; */
+}
+
+
+button {
+    align-self: center;
+    border: solid 0px white;
+    border-radius: 30px;
+    padding: 0.7rem 2rem;
+    
+    box-shadow: 0px 3px 0.5px rgb(0, 0, 0, 0.5);
+    
+    &:hover {
+        background-color: var(--_btn-color);
+
+        color: white;
+        box-shadow: 0px 3px 0.5px rgb(0, 0, 0, 1);
+        cursor: pointer;
+        
+    }
+
+    &:active {
+        position: relative;
+        top: 3px;
+        box-shadow: 0px 0px 0.5px rgb(0, 0, 0, 0.1);
+    }
+}
+
+
+
+
+
+
